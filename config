@@ -1,0 +1,7 @@
+Host *
+
+  user automation
+
+  ServerAliveInterval 60
+
+  ServerAliveCountMax 3
