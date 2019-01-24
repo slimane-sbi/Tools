@@ -1,0 +1,38 @@
+étapes pour nettoyer l'installation d'une base de donnés postgres
+
+df -h 
+
+/dev/mapper/rootvg-lv_pg_arch  976M  2.5M  907M   1% /pgsqldata_a7/9.6/pg_arch
+/dev/mapper/rootvg-lv_pg_log   976M  2.5M  907M   1% /pgsqldata_a7/9.6/pg_log
+/dev/mapper/rootvg-lv_pg_xlog  976M  2.5M  907M   1% /pgsqldata_a7/9.6/pg_xlog
+/dev/mapper/rootvg-lv_pg_back  976M  2.5M  907M   1% /pgsqldata_a7/9.6/pg_back
+/dev/mapper/rootvg-lv_pg_data  5.8G   24M  5.5G   1% /pgsqldata_m5/9.6/pg_data
+
+umount /pgsqldata_m5/9.6/pg_arch
+umount /pgsqldata_m5/9.6/pg_log
+umount  /pgsqldata_m5/9.6/pg_xlog
+umount /pgsqldata_m5/9.6/pg_back
+
+lvs pour afficher les lv
+
+ lvremove -f /dev/rootvg-lv_pg_arch
+ 
+lvremove -f /dev/rootvg/lv_pg_arch
+  Logical volume "lv_pg_arch" successfully removed
+lvremove -f /dev/rootvg/lv_pg_back
+  Logical volume "lv_pg_back" successfully removed
+lvremove -f /dev/rootvg/lv_pg_data
+  Logical volume "lv_pg_data" successfully removed
+ lvremove -f /dev/rootvg/lv_pg_log
+  Logical volume "lv_pg_log" successfully removed
+lvremove -f /dev/rootvg/lv_pg_xlog
+  Logical volume "lv_pg_xlog" successfully removed
+
+ yum list installed | grep postgresq  (afficher les packages installés)
+
+yum remove postgresql
+
+
+
+
+
