@@ -2,4 +2,6 @@ keeypass
 terminator
 atom + plugin
 vm
-
+http://www.yamllint.com/ pour valider
+http://wiki.ess3.net/yaml/
+https://grokdebug.herokuapp.com/
