@@ -5,3 +5,7 @@ vm
 http://www.yamllint.com/ pour valider
 http://wiki.ess3.net/yaml/
 https://grokdebug.herokuapp.com/
+set proxy 
+https_proxy=http://user:passwd@10.176.205.3:8090
+http_proxy=http://user:passwd@10.176.205.3:8090
+
