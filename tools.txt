@@ -9,3 +9,7 @@ set proxy
 https_proxy=http://user:passwd@10.176.205.3:8090
 http_proxy=http://user:passwd@10.176.205.3:8090
 
+# debug browser téléphone depuis un laptop
+chrome://inspect/#devices  
+
+
